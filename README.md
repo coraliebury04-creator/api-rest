@@ -69,3 +69,12 @@ python api_v4.py
 | **PUT** | `/v4/etudiants/2` | Modifier l'étudiant ID 2 | `200 OK` |
 | **DELETE** | `/v4/etudiants/3` | Supprimer l'étudiant ID 3 | `200 OK` |
 
+### 🔴 Cas d'Erreur
+| Méthode | Route | Condition d'erreur | Code Retour | Message JSON |
+| :--- | :--- | :--- | :--- | :--- |
+| **TOUTES** | `/v4/...` | Identifiants Basic Auth manquants ou incorrects | `401 Unauthorized` | `{"message": "Accès non autorisé"}` |
+| **GET** | `/v4/etudiants/999` | L'ID étudiant n'existe pas en BDD | `404 Not Found` | `"id invalide"` |
+| **POST** | `/v4/etudiants/` | Données manquantes ou invalides dans le JSON | `400 Bad Request` | `{"message": "Données invalides"}` |
+| **PUT** | `/v4/etudiants/999` | L'ID étudiant à modifier n'existe pas | `404 Not Found` | `"id invalide"` |
+| **DELETE** | `/v4/etudiants/999` | L'ID étudiant à supprimer n'existe pas | `404 Not Found` | `"id invalide"` |
+| **TOUTES** | `/v4/...` | Serveur MySQL indisponible / Échec de connexion | `500 Server Error` | `{"message": "Echec de connexion à la base de données"}` |
