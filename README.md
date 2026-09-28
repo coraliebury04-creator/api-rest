@@ -25,7 +25,7 @@ api-rest/
 ├── db.py            # Classe de connexion et requêtes vers la base de données
 ├── ciel2027.sql     # Script d'initialisation de la base de données
 └── README.md        # Documentation et rapport du projet
-
+````
 
 ## 🚀 Fonctionnalités & Évolution de l'API
 
