@@ -4,7 +4,7 @@ Ce projet met en œuvre un service web API REST avec Flask et MySQL pour la gest
 
 ---
 
-## 🛠️ Stack Technique
+##  Stack Technique
 
 * **Langage :** Python 3.14
 * **Framework Web :** Flask
@@ -14,12 +14,12 @@ Ce projet met en œuvre un service web API REST avec Flask et MySQL pour la gest
 
 ---
 
-## 📂 Structure du Projet
+##  Structure du Projet
 
 ```text
 api-rest/
 ├── api_v1.py        # Version 1 : API basique
-├── api_v2.py        # Version 2 : Intégration de la classe Database
+├── api_v2.py        # Version 2 : Intégration de la classe Data base
 ├── api_v3.py        # Version 3 : Gestion complète CRUD des étudiants
 ├── api_v4.py        # Version 4 : Sécurisation et authentification (Basic Auth)
 ├── db.py            # Classe de connexion et requêtes vers la base de données
@@ -27,7 +27,7 @@ api-rest/
 └── README.md        # Documentation et rapport du projet
 ````
 
-## 🚀 Fonctionnalités & Évolution de l'API
+##  Fonctionnalités & Évolution de l'API
 
 ### 🔹 Version 1 & 2 (`api_v1.py`, `api_v2.py`)
 * Mise en place de la structure de base du serveur Flask.
@@ -47,9 +47,25 @@ Implémentation complète des opérations **CRUD** sur les étudiants :
 
 ---
 
-## ⚡ Installation et Lancement
+##  Installation et Lancement
 
 ### 1. Activer l'environnement virtuel
 Dans le terminal PowerShell :
-```powershell
+```PowerShell
 .\venv\Scripts\Activate.ps1
+````
+### 2. Démarrer le serveur API
+PowerShell :
+```
+python api_v4.py
+````
+## Test Postman
+
+| Méthode | Route | Description | Code Succès |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/v4/etudiants/` | Récupérer tous les étudiants | `200 OK` |
+| **GET** | `/v4/etudiants/2` | Récupérer l'étudiant avec l'ID 2 | `200 OK` |
+| **POST** | `/v4/etudiants/` | Créer un nouvel étudiant | `201 Created` |
+| **PUT** | `/v4/etudiants/2` | Modifier l'étudiant ID 2 | `200 OK` |
+| **DELETE** | `/v4/etudiants/3` | Supprimer l'étudiant ID 3 | `200 OK` |
+
