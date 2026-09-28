@@ -69,7 +69,7 @@ python api_v4.py
 | **PUT** | `/v4/etudiants/2` | Modifier l'étudiant ID 2 | `200 OK` |
 | **DELETE** | `/v4/etudiants/3` | Supprimer l'étudiant ID 3 | `200 OK` |
 
-### 🔴 Cas d'Erreur
+###  Cas d'Erreur
 | Méthode | Route | Condition d'erreur | Code Retour | Message JSON |
 | :--- | :--- | :--- | :--- | :--- |
 | **TOUTES** | `/v4/...` | Identifiants Basic Auth manquants ou incorrects | `401 Unauthorized` | `{"message": "Accès non autorisé"}` |
